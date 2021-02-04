@@ -69,4 +69,9 @@ jobs:
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 29
-          script: ./gardlew connectedCheck
+          script: ./gradlew connectedCheck
+      - name: Upload Unit Test Report
+          uses: actions/upload-artifact@v1
+          with:
+            name: unit test report
+            path: app/build/reports/androidTests/
