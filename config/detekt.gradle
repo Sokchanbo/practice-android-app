@@ -1,0 +1,14 @@
+detekt {
+    input = project.files("src/main/java")
+    config = files("$rootDir/.detekt/config.yml")
+    reports {
+        xml {
+            enabled = true
+            destination = project.file("build/reports/detekt/report.xml")
+        }
+        html {
+            enabled = true
+            destination = project.file("build/reports/detekt/report.html")
+        }
+    }
+}
