@@ -26,12 +26,13 @@ android {
 
     buildTypes {
         debug {
-
             buildConfigField "String", "BASE_URL", "\"https://jobs.github.com/\""
 
             minifyEnabled false
         }
         release {
+            buildConfigField "String", "BASE_URL", "\"https://jobs.github.com/\""
+
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
